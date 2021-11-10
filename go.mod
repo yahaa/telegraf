@@ -325,6 +325,8 @@ require (
 	sigs.k8s.io/yaml v1.2.0 // indirect
 )
 
+require k8s.io/klog v1.0.0
+
 require (
 	github.com/aws/aws-sdk-go-v2/internal/ini v1.2.3 // indirect
 	github.com/cenkalti/backoff/v4 v4.1.1 // indirect

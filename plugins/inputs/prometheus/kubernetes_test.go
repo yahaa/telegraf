@@ -3,10 +3,11 @@ package prometheus
 import (
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/labels"
+
+	"github.com/influxdata/telegraf/testutil"
 
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -92,7 +93,7 @@ func TestAddMultipleDuplicatePods(t *testing.T) {
 	p := pod()
 	p.Annotations = map[string]string{"prometheus.io/scrape": "true"}
 	registerPod(p, prom)
-	p.Name = "Pod2"
+
 	registerPod(p, prom)
 	assert.Equal(t, 1, len(prom.kubernetesPods))
 }
