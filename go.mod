@@ -34,7 +34,7 @@ require (
 	github.com/Microsoft/hcsshim v0.8.21 // indirect
 	github.com/Shopify/sarama v1.29.1
 	github.com/StackExchange/wmi v1.2.1 // indirect
-	github.com/aerospike/aerospike-client-go v1.27.0
+	github.com/aerospike/aerospike-client-go v4.5.2+incompatible
 	github.com/alecthomas/participle v0.4.1 // indirect
 	github.com/alecthomas/units v0.0.0-20210208195552-ff826a37aa15
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.1004
