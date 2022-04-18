@@ -247,7 +247,7 @@ require (
 	github.com/snowflakedb/gosnowflake v1.6.2
 	github.com/streadway/amqp v0.0.0-20190827072141-edfb9018d271
 	github.com/stretchr/objx v0.2.0 // indirect
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.1
 	github.com/tbrandon/mbserver v0.0.0-20170611213546-993e1772cc62
 	github.com/testcontainers/testcontainers-go v0.11.1
 	github.com/tidwall/gjson v1.10.2
@@ -274,7 +274,7 @@ require (
 	go.etcd.io/etcd/api/v3 v3.5.0 // indirect
 	go.mongodb.org/mongo-driver v1.7.3
 	go.opencensus.io v0.23.0 // indirect
-	go.opentelemetry.io/collector/model v0.37.0
+	go.opentelemetry.io/collector/model v0.49.0
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v0.24.0
 	go.opentelemetry.io/otel/metric v0.24.0
 	go.opentelemetry.io/otel/sdk/metric v0.24.0
@@ -297,8 +297,8 @@ require (
 	google.golang.org/api v0.54.0
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20210827211047-25e5f791fe06
-	google.golang.org/grpc v1.41.0
-	google.golang.org/protobuf v1.27.1
+	google.golang.org/grpc v1.45.0
+	google.golang.org/protobuf v1.28.0
 	gopkg.in/asn1-ber.v1 v1.0.0-20181015200546-f715ec2f112d // indirect
 	gopkg.in/djherbis/times.v1 v1.2.0
 	gopkg.in/fatih/pool.v2 v2.0.0 // indirect
@@ -346,6 +346,7 @@ require (
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/pierrec/lz4/v4 v4.1.8 // indirect
 	github.com/rogpeppe/go-internal v1.6.2 // indirect
+	go.opentelemetry.io/collector/pdata v0.49.0 // indirect
 	go.opentelemetry.io/otel v1.0.1 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric v0.24.0 // indirect
 	go.opentelemetry.io/otel/internal/metric v0.24.0 // indirect
