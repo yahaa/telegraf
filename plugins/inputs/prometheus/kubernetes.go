@@ -326,10 +326,6 @@ func updateCadvisorPodList(p *Prometheus, req *http.Request) error {
 	}
 	pods := cadvisorPodsResponse.Items
 
-	// Updating pod list to be latest cadvisor response
-	p.lock.Lock()
-	p.kubernetesPods = make(map[string]URLAndAddress)
-
 	// Register pod only if it has an annotation to scrape, if it is ready,
 	// and if namespace and selectors are specified and match
 	for _, pod := range pods {
@@ -342,7 +338,6 @@ func updateCadvisorPodList(p *Prometheus, req *http.Request) error {
 			registerPod(pod, p)
 		}
 	}
-	p.lock.Unlock()
 
 	// No errors
 	return nil
@@ -436,8 +431,8 @@ func registerPod(pod *corev1.Pod, p *Prometheus) {
 		tags = map[string]string{}
 	}
 
-	tags["sd_pod_name"] = pod.Name
-	tags["sd_pod_namespace"] = pod.Namespace
+	tags["pod_name"] = pod.Name
+	tags["pod_namespace"] = pod.Namespace
 	// add labels as metrics tags
 	for k, v := range pod.Labels {
 		tags[k] = v
